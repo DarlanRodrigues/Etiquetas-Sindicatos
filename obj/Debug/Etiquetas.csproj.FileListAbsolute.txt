@@ -1,0 +1,11 @@
+C:\Users\Darlan\Documents\Visual Studio 2015\Projects\Etiquetas\Etiquetas\bin\Debug\Etiquetas.exe.config
+C:\Users\Ibyte\documents\visual studio 2017\Projects\Etiquetas\Etiquetas\bin\Debug\Etiquetas.exe.config
+C:\Users\Ibyte\documents\visual studio 2017\Projects\Etiquetas\Etiquetas\bin\Debug\Etiquetas.exe
+C:\Users\Ibyte\documents\visual studio 2017\Projects\Etiquetas\Etiquetas\bin\Debug\Etiquetas.pdb
+C:\Users\Ibyte\documents\visual studio 2017\Projects\Etiquetas\Etiquetas\obj\Debug\Etiquetas.csprojResolveAssemblyReference.cache
+C:\Users\Ibyte\documents\visual studio 2017\Projects\Etiquetas\Etiquetas\obj\Debug\Etiquetas.Index.resources
+C:\Users\Ibyte\documents\visual studio 2017\Projects\Etiquetas\Etiquetas\obj\Debug\Etiquetas.Properties.Resources.resources
+C:\Users\Ibyte\documents\visual studio 2017\Projects\Etiquetas\Etiquetas\obj\Debug\Etiquetas.csproj.GenerateResource.Cache
+C:\Users\Ibyte\documents\visual studio 2017\Projects\Etiquetas\Etiquetas\obj\Debug\Etiquetas.exe
+C:\Users\Ibyte\documents\visual studio 2017\Projects\Etiquetas\Etiquetas\obj\Debug\Etiquetas.pdb
+C:\Users\Ibyte\documents\visual studio 2017\Projects\Etiquetas\Etiquetas\obj\Debug\Etiquetas.frmAdicionarEditarSindicato.resources
