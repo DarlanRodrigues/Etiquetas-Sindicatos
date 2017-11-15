@@ -79,6 +79,7 @@
             this.cboRegiao.Name = "cboRegiao";
             this.cboRegiao.Size = new System.Drawing.Size(121, 21);
             this.cboRegiao.TabIndex = 3;
+            this.cboRegiao.SelectedIndexChanged += new System.EventHandler(this.cboRegiao_SelectedIndexChanged);
             // 
             // cboCidade
             // 
@@ -88,7 +89,6 @@
             this.cboCidade.Name = "cboCidade";
             this.cboCidade.Size = new System.Drawing.Size(121, 21);
             this.cboCidade.TabIndex = 5;
-            this.cboCidade.SelectedValueChanged += new System.EventHandler(this.cboCidade_SelectedValueChanged);
             // 
             // label3
             // 
@@ -207,9 +207,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAdicionarEditarSindicato";
+            this.ShowIcon = false;
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.frmAdicionarEditarSindicato_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

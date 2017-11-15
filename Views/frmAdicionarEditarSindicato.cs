@@ -15,34 +15,26 @@ namespace Etiquetas
 {
     public partial class frmAdicionarEditarSindicato : Form
     {
-        public String regiao { get; set; }
+        public Sindicato sindicato{ get; set; }
 
         public frmAdicionarEditarSindicato()
         {
             InitializeComponent();
         }
-
-        public frmAdicionarEditarSindicato(String regiao)
+        //Construtor para se receber um objeto sindicato para preencher os valores do formulario
+        public frmAdicionarEditarSindicato(Sindicato sind)
         {
-            this.regiao = regiao;
-            InitializeComponent();
-        }
-
-        public frmAdicionarEditarSindicato(Sindicato sindicato, String regiao)
-        {
+            sindicato = sind;
             InitializeComponent();
         }
 
         private void frmAdicionarEditarSindicato_Load(object sender, EventArgs e)
         {
-            RegioesDAO regioes = new RegioesDAO();  
+            RegioesDAO regioes = new RegioesDAO();
             DbDataReader readerRegioes = regioes.GetRegioes();
 
             while (readerRegioes.Read())
                 cboRegiao.Items.Add(readerRegioes.GetString(1));
-
-            cboRegiao.SelectedItem = this.regiao;
-            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -55,13 +47,9 @@ namespace Etiquetas
 
         }
 
-        private void cboCidade_SelectedValueChanged(object sender, EventArgs e)
+        private void cboRegiao_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CidadesDAO cidades = new CidadesDAO();
-            DbDataReader readerCidades = cidades.GetCidadesByNomeRegiao(cboRegiao.Text.ToString());
-
-            while (readerCidades.Read())
-                cboCidade.Items.Add(readerCidades);
+            CidadesDAO cidade = new CidadesDAO();
 
             
         }

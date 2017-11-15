@@ -29,6 +29,10 @@ namespace Etiquetas.DAO
         //    DbDataReader reader = DAOUtils.GetDataReader(comando);
         //    return reader;
         //}
+
+
+
+            //PROVAVELMENTE NÃO FUNCIONA, IMPLEMENTAR PRIMEIRO A JANELA PARA CADASTRAR NOVOS SINDICATOS PRIMEIRO
         public DbDataReader GetCidadesByNomeRegiao(String nomeRegiao)
         {
             DbConnection conexao = DAOUtils.GetConexao();

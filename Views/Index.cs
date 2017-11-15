@@ -1,4 +1,5 @@
-﻿using Etiquetas.DAO;
+﻿using Etiquetas.Classes;
+using Etiquetas.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -66,8 +67,9 @@ namespace Etiquetas
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
-            frmAdicionarEditarSindicato adicionar = new frmAdicionarEditarSindicato(cboRegioes.Text.ToString());
-            adicionar.Show();
+            frmAdicionarEditarSindicato adicionar = new frmAdicionarEditarSindicato();
+            adicionar.Text = "Adicionar Formulario";
+            adicionar.ShowDialog();
         }
 
         private void dgvSindicatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
