@@ -1,0 +1,1 @@
+Projeto para estudo da linguagem c# assim como um projeto para uma empresa especifica relacionada a sindicatos, o objetivo é cadastrar inumeros sindicatos para que depois possa ser criado etiquetas de cartas a partir dos dados do banco de dados.
