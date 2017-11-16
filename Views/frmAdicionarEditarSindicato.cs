@@ -35,8 +35,6 @@ namespace Etiquetas
             cboRegiao.DataSource = dtSet.Tables[0];
             cboRegiao.ValueMember = "regiaoId";
             cboRegiao.DisplayMember = "regiaoNome";
-            //while (readerRegioes.Read())
-            //    cboRegiao.Items.Add(readerRegioes.GetString(1));
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -51,7 +49,6 @@ namespace Etiquetas
 
         private void cboRegiao_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CidadesDAO cidade = new CidadesDAO();
 
             
         }

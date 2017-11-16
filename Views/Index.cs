@@ -27,9 +27,10 @@ namespace Etiquetas
         private void Index_Load(object sender, EventArgs e)
         {
             RegioesDAO regioes = new RegioesDAO();
-            DbDataReader reader = regioes.GetRegioes();
-            while (reader.Read())
-                cboRegioes.Items.Add(reader.GetString(1));
+            DataSet dtSet = regioes.GetRegioesDataSet();
+            cboRegioes.DataSource = dtSet.Tables[0];
+            cboRegioes.ValueMember = "regiaoId";
+            cboRegioes.DisplayMember = "regiaoNome";
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
