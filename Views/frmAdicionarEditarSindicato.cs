@@ -31,10 +31,12 @@ namespace Etiquetas
         private void frmAdicionarEditarSindicato_Load(object sender, EventArgs e)
         {
             RegioesDAO regioes = new RegioesDAO();
-            DbDataReader readerRegioes = regioes.GetRegioes();
-
-            while (readerRegioes.Read())
-                cboRegiao.Items.Add(readerRegioes.GetString(1));
+            DataSet dtSet = regioes.GetRegioesDataSet();
+            cboRegiao.DataSource = dtSet.Tables[0];
+            cboRegiao.ValueMember = "regiaoId";
+            cboRegiao.DisplayMember = "regiaoNome";
+            //while (readerRegioes.Read())
+            //    cboRegiao.Items.Add(readerRegioes.GetString(1));
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

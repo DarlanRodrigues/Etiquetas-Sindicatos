@@ -27,6 +27,22 @@ namespace Etiquetas.DAO
             DbDataReader reader = DAOUtils.GetDataReader(comando);
             return reader;
         }
+        /// <summary>
+        /// Metodo que retorna um DataSet com os dados do banco, deve ser usado como fonte de dados para o combobox.
+        /// </summary>
+        /// <returns>DataSet</returns>
+        public DataSet GetRegioesDataSet()
+        {
+            SqlConnection conexao = (SqlConnection)DAOUtils.GetConexao();
+            var query = "SELECT * FROM REGIOES";
+            SqlCommand comando = new SqlCommand(query, conexao);
+            SqlDataAdapter adapter = new SqlDataAdapter(comando);
+            DataSet dados = new DataSet();
+            adapter.Fill(dados);
+
+            return dados;
+        }
+
         public DbDataReader GetRegioesByNome(String nome)
         {
             DbConnection conexao = DAOUtils.GetConexao();
