@@ -11,7 +11,16 @@ namespace Etiquetas.DAO
 {
     class SindicatosDAO
     {
-        public DataTable GetSindicatos(String regiao)
+        public DbDataReader GetSincidatos()
+        {
+            DbConnection conexao = DAOUtils.GetConexao();
+            DbCommand comando = DAOUtils.GetComando(conexao);
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "";
+            DbDataReader reader = DAOUtils.GetDataReader(comando);
+            return reader;
+        }
+        public DataTable GetSindicatosByRegiao(String regiao)
         {
             DbConnection conexao = DAOUtils.GetConexao();
             DbCommand comando = DAOUtils.GetComando(conexao);

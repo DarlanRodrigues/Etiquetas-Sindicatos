@@ -36,11 +36,8 @@ namespace Etiquetas.DAO
             SqlConnection conexao = (SqlConnection)DAOUtils.GetConexao();
             var query = "SELECT * FROM REGIOES";
             SqlCommand comando = new SqlCommand(query, conexao);
-            SqlDataAdapter adapter = new SqlDataAdapter(comando);
-            DataSet dados = new DataSet();
-            adapter.Fill(dados);
-
-            return dados;
+            DataSet data = DAOUtils.GetDataSet(comando);
+            return data;
         }
 
         public DbDataReader GetRegioesByNome(String nome)

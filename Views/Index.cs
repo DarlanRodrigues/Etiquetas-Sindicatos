@@ -42,7 +42,7 @@ namespace Etiquetas
         private void CarregarDataGrindView()
         {
             SindicatosDAO sindicatos = new SindicatosDAO();
-            DataTable table = sindicatos.GetSindicatos(cboRegioes.Text.ToString());
+            DataTable table = sindicatos.GetSindicatosByRegiao(cboRegioes.Text.ToString());
             dgvSindicatos.DataSource = table;
             dgvSindicatos.Refresh();
         }

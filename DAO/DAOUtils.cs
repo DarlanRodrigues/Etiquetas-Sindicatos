@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
@@ -24,6 +25,13 @@ namespace Etiquetas.DAO
         public static DbDataReader GetDataReader(DbCommand comando)
         {
             return comando.ExecuteReader();
+        }
+        public static DataSet GetDataSet(SqlCommand comando)
+        {
+            DataSet data = new DataSet();
+            SqlDataAdapter adapter = new SqlDataAdapter(comando);
+            adapter.Fill(data);
+            return data;
         }
     }
 }
