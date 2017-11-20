@@ -36,14 +36,14 @@ namespace Etiquetas
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
             LiberarComponentes();
-            CarregarDataGrindView();   
+            CarregarDataGrindView();
         }
 
         private void CarregarDataGrindView()
         {
             SindicatosDAO sindicatos = new SindicatosDAO();
-            DataTable table = sindicatos.GetSindicatosByRegiao(cboRegioes.Text.ToString());
-            dgvSindicatos.DataSource = table;
+            DataSet data = sindicatos.GetSindicatosDataSet(cboRegioes.Items.IndexOf("regiaoId"));
+            dgvSindicatos.DataSource = data;
             dgvSindicatos.Refresh();
         }
         private void LiberarComponentes()

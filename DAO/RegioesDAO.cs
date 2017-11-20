@@ -33,6 +33,7 @@ namespace Etiquetas.DAO
         /// <returns>DataSet</returns>
         public DataSet GetRegioesDataSet()
         {
+            // é preciso fazer uma comversão explicita para sqlconnection para utilizar ja que o dataset so aceita sqlcommand no construtor.
             SqlConnection conexao = (SqlConnection)DAOUtils.GetConexao();
             var query = "SELECT * FROM REGIOES";
             SqlCommand comando = new SqlCommand(query, conexao);
